@@ -1,0 +1,104 @@
+/* personal information */
+.about table {
+    height: 54vh;
+    font-size: 17px;
+    padding: 15px;
+    width: 80%;
+    margin: auto;
+    border-spacing: 0;
+}
+
+.about table td:not(td.button) {
+    border-bottom: 1px solid var(--border--color);
+    padding: 20px 0;
+}
+
+.about table tr td span:first-child {
+    color: var(--fontSecond--color);
+    font-weight: 500;
+}
+
+.about table tr td span:last-child {
+    font-weight: bold;
+}
+
+.about td.button {
+    padding-top: 20px;
+}
+
+.about td.button:hover .cursor {
+    transform: scale(2);
+    background-color: var(--main--color);
+}
+
+@media (max-width: 992px) {
+    .about table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .about table tr td span:last-child {
+        display: block;
+    }
+}
+
+/* my skills */
+.my_skills {
+    position: relative;
+    transition: all 15s linear;
+    margin-bottom: 60px;
+}
+
+.my_skills .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.my_skills .skill {
+    text-align: center;
+    width: max-content;
+    margin: 20px;
+    filter: saturate(0.3);
+}
+
+.my_skills .progress {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: conic-gradient(var(--main--color) 3.6deg, var(--background--color) 0deg);
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.my_skills .progress::before {
+    width: 130px;
+    height: 130px;
+    position: absolute;
+    content: "";
+    background-color: var(--background--color);
+    border-radius: 50%;
+}
+
+.my_skills .skills .value {
+    position: relative;
+    font-size: 20px;
+    color: var(--main--color);
+    font-weight: bold;
+}
+
+[dir="rtl"] .my_skills .skills .value {
+    font-family: "Lalezar";
+    font-weight: 700;
+    font-size: 30px;
+
+}
+
+.skill_name {
+    font-weight: bold;
+    font-size: 18px;
+}

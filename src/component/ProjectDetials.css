@@ -1,0 +1,84 @@
+.projectDetails .imgWebsite {
+    height: 400px;
+    margin: 0 auto;
+    background-size: cover;
+}
+
+.projectDetails .buttons {
+    width: max-content;
+    margin-left: auto;
+    padding-top: 351px;
+}
+
+.projectDetails .buttons i {
+    background-color: var(--background--color);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    display: inline-block;
+    line-height: 30px;
+    margin-left: 13px;
+}
+
+.projectDetails .buttons button {
+    color: var(--background--color);
+    margin: 10px;
+    height: 32px;
+    width: max-content;
+    padding: 0 15px;
+}
+
+.projectDetails .buttons button:hover {
+    color: var(--backgroundInterval--color);
+}
+
+.projectDetails .imgWebsite ul {
+    position: absolute;
+    z-index: 12;
+    top: 49%;
+    color: var(--fontSecond--color);
+}
+
+.projectDetails .imgWebsite ul li {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    line-height: 50px;
+    text-align: center;
+    background-color: var(--background--color);
+    font-size: 25px;
+    margin: 10px 0px;
+}
+
+.projectDetails .info {
+    display: flex;
+    line-height: 1.5;
+}
+
+.projectDetails .info>ul {
+    border-radius: 15px;
+    width: 50%;
+}
+
+.projectDetails .info>ul h2 {
+    border-bottom: 1px solid var(--border--color);
+}
+
+.projectDetails h3 {
+    color: #a4a4a4;
+    margin-left: 40px;
+}
+
+.projectDetails .more_project {
+    margin-left: 40px;
+}
+
+.projectDetails .more_project i {
+    animation: moveRight 1s ease-in-out infinite;
+}
+
+@keyframes moveRight {
+    100% {
+        margin: 0 20px 0 -20px;
+    }
+}

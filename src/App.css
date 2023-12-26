@@ -1,0 +1,145 @@
+:root {
+    --main--color: rgb(0, 196, 204);
+    --background--color: black;
+    --backgroundInterval--color: white;
+    --backgroundSecond--color: #1a1a1a;
+    --boxshadow--color: black;
+    --border--color: rgb(82 81 81);
+    --fontMain--color: white;
+    --fontSecond--color: rgb(164 164 164);
+    --p--color: rgb(233 233 233)
+}
+
+* {
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+    color: white;
+    transition: all 1s ease;
+    transition-property: margin-left, margin-right, background, box-shadow;
+    cursor: none;
+}
+
+*::selection {
+    background-color: var(--main--color);
+    color: white;
+}
+
+body {
+    background-color: var(--background--color);
+}
+
+.App {
+    display: flex;
+}
+
+.App>div:last-of-type {
+    flex-basis: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    overflow: auto;
+    animation: left 1s ease-in-out;
+}
+
+@keyframes left {
+    0% {
+        margin-top: -996px;
+    }
+
+    100% {
+        margin-top: 40px;
+    }
+
+}
+
+h1 {
+    font-family: "Open Sans", sans-serif;
+    font-family: "Bebas Neue", sans-serif;
+    letter-spacing: 5px;
+    text-align: center;
+    color: var(--main--color);
+    font-size: 40px;
+    margin-bottom: 40px;
+}
+
+[dir="rtl"] h1 {
+    font-family: 'Reem Kufi',
+        sans-serif;
+}
+
+[dir="rtl"] * {
+    letter-spacing: 1px;
+
+}
+
+p {
+    color: var(--fontMain--color);
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+button {
+    width: 235px;
+    height: 51px;
+    background-color: var(--main--color);
+    border: 1px solid transparent;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: var(--background--color);
+    border: 1px solid var(--main--color);
+}
+
+button:hover i {
+    animation: none;
+}
+
+.container {
+    max-width: 1170px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: auto;
+}
+
+@media (min-width: 500px) {
+
+    /* small devices*/
+    .container {
+        max-width: 466px;
+    }
+}
+
+@media (min-width: 576px) {
+
+    /* small devices*/
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+
+    /* medium devices*/
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+
+    /* pc devices*/
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+
+    /* large screen*/
+    .container {
+        max-width: 1140px;
+    }
+}

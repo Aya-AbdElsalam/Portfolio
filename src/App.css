@@ -80,12 +80,13 @@ p {
 
 button {
     width: 235px;
-    height: 51px;
+    height: max-content;
     background-color: var(--main--color);
     border: 1px solid transparent;
     font-weight: bold;
     font-size: 20px;
     cursor: pointer;
+    padding: 20px;
 }
 
 button:hover {

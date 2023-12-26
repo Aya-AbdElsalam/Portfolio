@@ -49,6 +49,10 @@ function setting() {
       e.target.parentNode.parentNode.classList.toggle("open");
     });
 }
+function closeNavbar() {
+  document.querySelector(".links").classList.remove("open");
+  document.querySelector(".menu").classList.remove("open");
+}
 //color mode
 function mode() {
   if (localStorage.getItem("color-option")) {
@@ -123,7 +127,12 @@ function Navbar() {
       </div>
       <ul className="links">
         <li>
-          <Link to={"/"}>
+          <Link
+            to={"/"}
+            onClick={() => {
+              closeNavbar();
+            }}
+          >
             <i>
               <FontAwesomeIcon icon={faHouse} />
             </i>
@@ -131,7 +140,12 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to={"about"}>
+          <Link
+            to={"about"}
+            onClick={() => {
+              closeNavbar();
+            }}
+          >
             <i>
               <FontAwesomeIcon icon={faUser} />
             </i>
@@ -139,7 +153,12 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to={"projects"}>
+          <Link
+            to={"projects"}
+            onClick={() => {
+              closeNavbar();
+            }}
+          >
             <i>
               <FontAwesomeIcon icon={faBriefcase} />
             </i>
@@ -147,7 +166,12 @@ function Navbar() {
           </Link>
         </li>
         <li>
-          <Link to={"contact"}>
+          <Link
+            to={"contact"}
+            onClick={() => {
+              closeNavbar();
+            }}
+          >
             <i>
               <FontAwesomeIcon icon={faEnvelope} />
             </i>

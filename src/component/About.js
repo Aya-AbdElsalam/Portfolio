@@ -206,12 +206,17 @@ function About() {
               </tr>
               <tr>
                 <td className="button">
-                  <button>
-                    {t("DOWNLOADCV")}&nbsp; &nbsp;
-                    <i>
-                      <FontAwesomeIcon icon={faDownload} />
-                    </i>
-                  </button>
+                  <a
+                    href="https://drive.google.com/file/d/1xZbw-03E_kMRgMXP-itv-cLsw_ZR9fEa/view?usp=sharing"
+                    target="_blanck"
+                  >
+                    <button>
+                      {t("DOWNLOADCV")}&nbsp; &nbsp;
+                      <i>
+                        <FontAwesomeIcon icon={faDownload} />
+                      </i>
+                    </button>
+                  </a>
                 </td>
               </tr>
             </tbody>

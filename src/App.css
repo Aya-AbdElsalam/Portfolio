@@ -79,7 +79,7 @@ p {
 }
 
 button {
-    width: 235px;
+    width: max-content;
     height: max-content;
     background-color: var(--main--color);
     border: 1px solid transparent;

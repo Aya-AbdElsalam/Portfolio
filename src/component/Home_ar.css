@@ -48,6 +48,10 @@
         height: 51px;
     }
 
+    [dir="rtl"] .home .info ul li {
+        height: 50px;
+    }
+
     @keyframes slide_ar {
         100% {
             top: -56.8px;

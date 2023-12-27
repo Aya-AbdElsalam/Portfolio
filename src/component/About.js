@@ -22,7 +22,7 @@ function About() {
       let windowScroll = this.pageYOffset;
       if (
         windowScroll >=
-        skillOffsetTop + skillOuterHeight - windowHeight - 80
+        skillOffsetTop + skillOuterHeight - windowHeight - 20
       ) {
         document.querySelectorAll(".progress").forEach((skill, index) => {
           let progressStart = 0;
@@ -146,7 +146,7 @@ function About() {
             if (progressStart === parseInt(skill.dataset.progress)) {
               clearInterval(progressInterval);
             }
-          }, 30);
+          }, 10);
         });
       }
     };

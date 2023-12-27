@@ -11,6 +11,22 @@
   z-index: 1001;
 }
 
+@media only screen and (max-width:720px) {
+  * {
+    cursor: default;
+  }
+}
+
+@media only screen and (max-width:480px) {
+  .cursor {
+    display: none;
+  }
+
+  * {
+    cursor: default;
+  }
+}
+
 .navbar .menu {
   font-size: 30px;
   font-weight: bold;

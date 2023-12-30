@@ -32,7 +32,6 @@
   font-weight: bold;
   line-height: 0.3;
   display: none;
-  z-index: 1005;
   position: fixed;
   background: var(--main--color);
   height: 7%;

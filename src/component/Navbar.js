@@ -202,8 +202,22 @@ function Navbar() {
             <div className="lan">
               <h4>{t("lan")}</h4>
               <ul>
-                <li onClick={changeEN}>{t("EN")}</li>
-                <li onClick={changeAR}>{t("AR")}</li>
+                <li
+                  onClick={() => {
+                    changeEN();
+                    closeNavbar();
+                  }}
+                >
+                  {t("EN")}
+                </li>
+                <li
+                  onClick={() => {
+                    changeAR();
+                    closeNavbar();
+                  }}
+                >
+                  {t("AR")}
+                </li>
               </ul>
             </div>
           </div>

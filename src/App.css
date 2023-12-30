@@ -41,6 +41,10 @@ body {
     animation: left 1s ease-in-out;
 }
 
+#tsparticles {
+    z-index: -1;
+}
+
 @keyframes left {
     0% {
         margin-top: -996px;

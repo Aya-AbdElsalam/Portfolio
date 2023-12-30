@@ -10,10 +10,15 @@ import { useTranslation } from "react-i18next";
 </style>;
 function About() {
   const { t, i18n } = useTranslation();
-  //start function of skill progress
-  useEffect(() => {
-    cursor(document.querySelectorAll(".about td.button"));
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  function scroll() {
     let skills = document.querySelector(".my_skills");
+    document.querySelectorAll(".progress").forEach((skill, index) => {
+      skill.style.background = `conic-gradient(rgb(115 115 255) ${
+        3.6 * skill.dataset.progress
+      }deg , #1a1a1a 0deg)`;
+      skill.style.filter = `hue-rotate(${3.6 * skill.dataset.progress}deg)`;
+    });
     //show value of each skill when reach to skills_section
     window.onscroll = function () {
       let skillOffsetTop = skills.offsetTop;
@@ -21,8 +26,11 @@ function About() {
       let windowHeight = this.innerHeight;
       let windowScroll = this.pageYOffset;
       if (
-        windowScroll >=
-        skillOffsetTop + skillOuterHeight - windowHeight - 20
+        (windowScroll >=
+          skillOffsetTop + skillOuterHeight - windowHeight - 35 &&
+          windowScroll <=
+            skillOffsetTop + skillOuterHeight - windowHeight - 25) ||
+        windowScroll === skillOffsetTop + skillOuterHeight - windowHeight + 100
       ) {
         document.querySelectorAll(".progress").forEach((skill, index) => {
           let progressStart = 0;
@@ -150,7 +158,12 @@ function About() {
         });
       }
     };
-  });
+  }
+  //start function of skill progress
+  useEffect(() => {
+    cursor(document.querySelectorAll(".about td.button"));
+    scroll();
+  }, [scroll]);
   //end function of skill progress
 
   //start about section Dom

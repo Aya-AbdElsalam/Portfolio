@@ -1,7 +1,10 @@
-import project1 from "../photo/project1.png";
-import project1Website from "../photo/project1Website.png";
-import project2 from "../photo/project2.png";
-import project2Website from "../photo/project2Website.png";
+import project1 from "../photo/project1.webp";
+import project1Website from "../photo/project1Website.webp";
+import project2 from "../photo/project2.webp";
+import project2Website from "../photo/project2Website.webp";
+import project3 from "../photo/project3.webp";
+import project3Website from "../photo/project3Website.webp";
+import mui from "../photo/mui.png";
 import {
   faHtml5,
   faCss3Alt,
@@ -114,6 +117,44 @@ const ProjectList = [
     ],
     dataStorage: "Local storage , session storage",
     dataStorage_ar: "تخزين الجلسة , التخزين المحلي ",
+  },
+  {
+    id: 3,
+    img: project3,
+    imgAllPages: project3Website,
+    title: "PROLAND",
+    imgIcon: mui,
+    liveMode: "https://proland-site.netlify.app/",
+    code: "https://github.com/Aya-AbdElsalam/PROLAND",
+    lang: [faReact],
+
+    pages: [
+      "Landing page contains [PRODUCT - FEATURES - REVIEWS - CONTACT]",
+      "Admin panel contains [DASHBOARD - USERS - ORDERS - TEAM - PRODUCTS]",
+    ],
+    pages_ar: [
+      "صفحه رئيسيه تحتوي علي [المنتجات - المميزات - التقييمات - تواصل ]",
+      "لوحة الإدارة تحتوي على [لوحة التحكم - المستخدمون - الطلبات - الفريق - المنتجات]",
+    ],
+
+    features: [
+      "Add a new member",
+      "Remove member",
+      "Edit member's information",
+      "Add a new product",
+      "Remove product",
+      "Edit product's details",
+    ],
+    features_ar: [
+      "إضافة عضو جديد",
+      "إزالة عضو",
+      "تعديل المعلومات الخاصه بالعضو",
+      "إضافة منتج جديد",
+      "حذف المنتج",
+      "تعديل البيانات الخاصه بالمنتج",
+    ],
+    dataStorage: "https://prolanddata.onrender.com",
+    dataStorage_ar: "https://prolanddata.onrender.com",
   },
 ];
 export default ProjectList;

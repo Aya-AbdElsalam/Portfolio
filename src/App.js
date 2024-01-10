@@ -117,22 +117,14 @@ function App() {
       <Navbar />
 
       <Routes>
-        <Route path="/" element={<Home />}>
-          {" "}
-        </Route>
-        <Route path="about" element={<About />}>
-          {" "}
-        </Route>
-        <Route path="projects" element={<Projects />}>
-          {" "}
-        </Route>
+        <Route path="/" element={<Home />}></Route>
+        <Route path="about" element={<About />}></Route>
+        <Route path="projects" element={<Projects />}></Route>
         <Route
           path="projects/:projectId"
           element={<ProjectDetails></ProjectDetails>}
         ></Route>
-        <Route path="contact" element={<ContactUs />}>
-          {" "}
-        </Route>
+        <Route path="contact" element={<ContactUs />}></Route>
       </Routes>
     </div>
   );

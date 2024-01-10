@@ -264,6 +264,12 @@ function About() {
               <span className="skill_name">Bootstrap</span>
             </div>
             <div className="skill">
+              <div className="progress" data-progress="90">
+                <span className="value">{t("90%")}</span>
+              </div>
+              <span className="skill_name">MUI</span>
+            </div>
+            <div className="skill">
               <div className="progress" data-progress="70">
                 <span className="value">{t("70%")}</span>
               </div>

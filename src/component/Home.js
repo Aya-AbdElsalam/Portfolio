@@ -1,10 +1,9 @@
 import "../component/Home.css";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import developer from "../photo/developer.jpg";
+import developer from "../photo/developer.webp";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
-import { cursor } from "../App";
 import { useTranslation } from "react-i18next";
 //style sheet for arabic language
 import "../component/Home_ar.css";
@@ -16,7 +15,6 @@ function Home() {
     });
   }
   useEffect(() => {
-    cursor(document.querySelectorAll(".more_about"));
     toAbout();
   }, []);
   const { t } = useTranslation();
@@ -31,7 +29,15 @@ function Home() {
         </ul>
         <p>{t("homeP")}</p>
         <Link className="toAbout" to={"about"}>
-          <button className="more_about">
+          <button
+            className="more_about"
+            onMouseOver={(e) => {
+              document.querySelector(".cursor").classList.add("active");
+            }}
+            onMouseOut={() => {
+              document.querySelector(".cursor").classList.remove("active");
+            }}
+          >
             {t("More about me")}
             <i>
               <FontAwesomeIcon icon={faArrowRight} />
@@ -40,9 +46,12 @@ function Home() {
         </Link>
       </div>
       <div className="img">
-        <div className="background"></div>
+        <div
+          className="background"
+          style={{ height: "100%", width: "100%" }}
+        ></div>
         <div className="image">
-          <img alt="" src={developer} />
+          <img alt="" src={developer} height={"100%"} width={"100%"} />
         </div>
       </div>
     </div>

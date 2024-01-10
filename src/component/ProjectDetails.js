@@ -27,6 +27,7 @@ function ProjectDetails() {
         pages: p.pages_ar,
         features: p.features_ar,
         dataStorage: p.dataStorage_ar,
+        imgIcon: p.imgIcon,
       };
     } else {
       return {
@@ -40,6 +41,7 @@ function ProjectDetails() {
         pages: p.pages,
         features: p.features,
         dataStorage: p.dataStorage,
+        imgIcon: p.imgIcon,
       };
     }
   });
@@ -92,6 +94,18 @@ function ProjectDetails() {
               </li>
             );
           })}
+          {choosenProject.imgIcon && (
+            <li>
+              <i>
+                <img
+                  src={choosenProject.imgIcon}
+                  width={"100%"}
+                  height={"100%"}
+                  alt=""
+                />
+              </i>
+            </li>
+          )}
         </ul>
       </div>
       <div className="container">

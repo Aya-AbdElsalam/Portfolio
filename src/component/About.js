@@ -240,14 +240,14 @@ function About() {
           <h1>{t("MYSKILLS")}</h1>
           <div className="skills">
             <div className="skill">
-              <div className="progress" data-progress="90">
-                <span className="value">{t("90%")}</span>
+              <div className="progress" data-progress="98">
+                <span className="value">{t("98%")}</span>
               </div>
               <span className="skill_name">HTML</span>
             </div>
             <div className="skill">
-              <div className="progress" data-progress="85">
-                <span className="value">{t("85%")}</span>
+              <div className="progress" data-progress="90">
+                <span className="value">{t("90%")}</span>
               </div>
               <span className="skill_name">CSS</span>
             </div>
@@ -256,6 +256,18 @@ function About() {
                 <span className="value">{t("80%")}</span>
               </div>
               <span className="skill_name">JavaScript</span>
+            </div>
+            <div className="skill">
+              <div className="progress" data-progress="70">
+                <span className="value">{t("80%")}</span>
+              </div>
+              <span className="skill_name">TypeScript</span>
+            </div>
+            <div className="skill">
+              <div className="progress" data-progress="70">
+                <span className="value">{t("80%")}</span>
+              </div>
+              <span className="skill_name">Sass</span>
             </div>
             <div className="skill">
               <div className="progress" data-progress="90">
@@ -270,7 +282,7 @@ function About() {
               <span className="skill_name">MUI</span>
             </div>
             <div className="skill">
-              <div className="progress" data-progress="70">
+              <div className="progress" data-progress="80">
                 <span className="value">{t("70%")}</span>
               </div>
               <span className="skill_name">React</span>

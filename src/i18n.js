@@ -19,7 +19,7 @@ const resources = {
       "CREATIVE CODER": "CREATIVE CODER",
       "FRONTEND DEVELOPER": "FRONTEND DEVELOPER",
       homeP:
-        "I am a front-end developer with good knowledge of HTML5, CSS3,  JAVASCRIPT, REACT.I can build a Responsive Website so that your website will look perfect on all devices. ",
+        "I am a front-end developer with good knowledge of React.JS/React.ts I can build a Responsive Website so that your website will look perfect on all devices. ",
 
       ///////About//////////////
       personalInformationTitle: "PERSONAL INFORMATION",
@@ -88,7 +88,7 @@ const resources = {
       "CREATIVE CODER": "البرمجه  بطريقة  ابداعية",
       "FRONTEND DEVELOPER": "مطورة  واجهات ويب أمامية",
       homeP:
-        "أنا مطورة واجهات ويب أمامية ولدي معرفة جيدة بـ HTML5 وCSS3 وJAVASCRIPT وREACT. كما يمكنني إنشاء موقع ويب سريع الاستجابة بحيث يبدو موقع الويب الخاص بك مثاليًا على جميع الأجهزة.",
+        "أنا مطورة واجهات ويب أمامية ولدي معرفة جيدة بـ React.JS/React.ts. كما يمكنني إنشاء موقع ويب سريع الاستجابة بحيث يبدو موقع الويب الخاص بك مثاليًا على جميع الأجهزة.",
       "More about me": "للمزيد من المعلومات",
       ///////About//////////////
       personalInformationTitle: "معلومات شخصية",

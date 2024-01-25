@@ -267,7 +267,7 @@ function About() {
               <div className="progress" data-progress="70">
                 <span className="value">{t("80%")}</span>
               </div>
-              <span className="skill_name">Sass</span>
+              <span className="skill_name">SASS</span>
             </div>
             <div className="skill">
               <div className="progress" data-progress="90">

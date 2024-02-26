@@ -1,3 +1,20 @@
+# About the Project
+The personal portfolio website offers individuals the opportunity to effectively reach a diverse audience. By providing content in two languages, such a website ensures broader accessibility and engagement. Customers can communicate via Gmail and request services more quickly, enhancing communication effectiveness and response speed.
+
+👉 **Live Demo :** https://aya-abd-elsalam.vercel.app/
+
+# The site
+![portfolioEn](https://github.com/Aya-AbdElsalam/Portfolio/assets/152267387/c4decc2e-1fea-4052-b011-17a272b858f9)
+![portfolioAr](https://github.com/Aya-AbdElsalam/Portfolio/assets/152267387/6417ddd2-88f0-4b11-aecd-54c59a525abe)
+
+# Tools
+- React.js
+- CSS
+- i18next
+- sweetalert2
+- fortawesome
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

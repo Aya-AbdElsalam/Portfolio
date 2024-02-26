@@ -16,6 +16,8 @@
 .about table tr td span:first-child {
     color: var(--fontSecond--color);
     font-weight: 500;
+    font-size: 20px;
+    line-height: 2;
 }
 
 .about table tr td span:last-child {

@@ -14,3 +14,7 @@
     font-style: normal;
     margin-top: -105px;
 }
+
+[dir="rtl"] .home p {
+    font-family: 'Reem Kufi';
+}

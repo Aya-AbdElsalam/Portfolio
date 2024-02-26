@@ -9,13 +9,14 @@ const resources = {
       Home: "Home",
       About: "About",
       Projects: "Projects",
-      Contact: "Contact",
+      contact: "Contact",
       Setting: "Setting",
       Colors: "Colors",
       lan: "lan",
       EN: "EN",
       AR: "AR",
-      homeTitle: "HI, I'M AYA AbdElsalam!",
+      homeTitle: "Hello",
+      myName: "I am Aya AbdElsalam",
       "CREATIVE CODER": "CREATIVE CODER",
       "FRONTEND DEVELOPER": "FRONTEND DEVELOPER",
       homeP:
@@ -52,10 +53,9 @@ const resources = {
       projectDetailsTitle: "Project/",
       livepreview: "live preview",
       code: "code",
-      PAGES: "PAGES",
-      FEATURES: "FEATURES",
-      Using: "Using :",
-      toStoreData: "to store data",
+      Aboutthesite: "About the site",
+      Tools: "Tools",
+      Thesite: "The site",
       backToProjects: "back to projects",
       //////GET IN TOUCH//////
       contactPageTitle: "GET IN TOUCH",
@@ -78,17 +78,18 @@ const resources = {
       Home: "الصفحه الرئيسية",
       About: "معلومات عني",
       Projects: "مشاريع",
-      Contact: "اتصل بنا",
+      contact: "اتصل بنا",
       Setting: "الاعدادات",
       Colors: "الألوان",
       lan: "اللغة",
       EN: "الانجليزيه",
       AR: "العربية",
-      homeTitle: "مرحبا , انا ايه عبد السلام!",
+      homeTitle: "مرحبا",
+      myName: "انا آية عبدالسلام",
       "CREATIVE CODER": "البرمجه  بطريقة  ابداعية",
       "FRONTEND DEVELOPER": "مطورة  واجهات ويب أمامية",
       homeP:
-        "أنا مطورة واجهات ويب أمامية ولدي معرفة جيدة بـ React.JS/React.ts. كما يمكنني إنشاء موقع ويب سريع الاستجابة بحيث يبدو موقع الويب الخاص بك مثاليًا على جميع الأجهزة.",
+        " مطورة واجهات ويب أمامية ولدي معرفة جيدة بـ React.JS/React.ts. كما يمكنني إنشاء موقع ويب سريع الاستجابة بحيث يبدو موقع الويب الخاص بك مثاليًا على جميع الأجهزة.",
       "More about me": "للمزيد من المعلومات",
       ///////About//////////////
       personalInformationTitle: "معلومات شخصية",
@@ -124,10 +125,9 @@ const resources = {
       projectDetailsTitle: "مشروع/",
       livepreview: "للمعاينة",
       code: "الكود",
-      PAGES: "الصفحات",
-      FEATURES: "السمات",
-      Using: "تم استخدام",
-      toStoreData: "لتخزين البيانات",
+      Aboutthesite: "عن المشروع",
+      Tools: "الأدوات",
+      Thesite: "المنصة",
       backToProjects: "العودة للمشاريع",
 
       //////GET IN TOUCH//////
@@ -159,5 +159,3 @@ i18n
       escapeValue: false,
     },
   });
-
-export default i18n;

@@ -1,0 +1,131 @@
+/* form for sent message */
+.cursor.input {
+    width: 0;
+    border-radius: 0;
+}
+
+.contact form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.contact form>div {
+    flex-basis: 49%;
+}
+
+.contact form label {
+    display: block;
+}
+
+.contact form input,
+.contact form textarea {
+    width: 100%;
+    height: 58px;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    background-color: black;
+    border: 1px solid var(--border--color);
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 0s 600000s, color 0s 600000s;
+}
+
+.contact form textarea {
+    height: 200px;
+}
+
+.contact form>div:last-of-type,
+.contact form>div:nth-of-type(3) {
+    flex-basis: 100%;
+
+}
+
+.contact form input:focus,
+.contact form textarea:focus {
+    outline: 1px solid var(--main--color);
+}
+
+.contact form button i {
+    font-size: 27px;
+}
+
+/* contact methods */
+.contact .container>h2 {
+    margin-top: 30px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border--color);
+}
+
+.get_in_touch {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.get_in_touch>div {
+    flex-basis: 50%;
+}
+
+.get_in_touch>div:first-of-type ul {
+    padding: 0;
+}
+
+.get_in_touch>div:first-of-type ul li {
+    display: inline-block;
+    margin: 0 20px 0 0;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    background-color: var(--main--color);
+    line-height: 50px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.get_in_touch>div:first-of-type ul li a {
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.get_in_touch>div:first-of-type ul li:hover {
+    background-color: var(--background--color);
+    border: 5px solid var(--main--color);
+    line-height: 40px;
+}
+
+.get_in_touch>div:first-of-type p {
+    color: #c8c8c8e0;
+
+}
+
+.get_in_touch>div:last-of-type li {
+    display: flex;
+    border: 1px solid var(--border--color);
+    margin-bottom: 20px;
+    padding: 20px;
+}
+
+.get_in_touch>div:last-of-type li i {
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.get_in_touch>div:last-of-type li p {
+    margin: 0;
+}
+
+@media(max-width:770px) {
+    .get_in_touch>div {
+        flex-basis: 100%;
+    }
+
+    .get_in_touch>div:last-of-type ul {
+        padding: 0;
+    }
+}

@@ -1,45 +1,52 @@
 import "./App.css";
-import Navbar from "./component/Navbar";
+import Navbar from "./component/js/Navbar";
 import { Route, Routes } from "react-router-dom";
-import Home from "./component/Home";
-import About from "./component/About";
-import Projects from "./component/Projects";
-import ContactUs from "./component/Contact";
-import ProjectDetails from "./component/ProjectDetails";
+import Home from "./pages/js/Home";
+import About from "./pages/js/About";
+import Projects from "./pages/js/Projects";
+import ContactUs from "./pages/js/Contact";
+import ProjectDetails from "./pages/js/ProjectDetails";
 import Particles from "react-tsparticles";
-import { useCallback } from "react";
+import { useCallback, useEffect } from "react";
 import { loadSlim } from "tsparticles-slim";
-function cursor(element) {
-  element.forEach((e) => {
-    e.addEventListener("mouseover", () => {
-      document.querySelector(".cursor").classList.add("active");
-    });
-    e.addEventListener("mouseout", () => {
-      document.querySelector(".cursor").classList.remove("active");
-    });
-  });
-}
+import Cursor from "./component/js/Cursor";
+import { useState } from "react";
+import { useTranslation } from "react-i18next";
+
 function App() {
+  const [activeCursor, setActiveCursor] = useState(false);
+  const [activeInputCursor, setActiveInputCursor] = useState(false);
+  const [moreInfo, setMoreInfo] = useState(false);
+
   const particlesInit = useCallback(async (engine) => {
     await loadSlim(engine);
   }, []);
-
   const particlesLoaded = useCallback(async (container) => {}, []);
-
+  const { i18n } = useTranslation();
+  //color mode
+  function mode() {
+    if (localStorage.getItem("color-option")) {
+      document.documentElement.style.setProperty(
+        "--main--color",
+        localStorage.getItem("color-option")
+      );
+    }
+  }
+  //change language
+  function returnLan(h) {
+    if (localStorage.getItem("i18nextLng")) {
+      h.changeLanguage(localStorage.getItem("i18nextLng"));
+      if (localStorage.getItem("i18nextLng") === "ar") {
+        document.body.dir = "rtl";
+      }
+    }
+  }
+  useEffect(() => {
+    mode();
+    returnLan(i18n);
+  }, [i18n]);
   return (
     <div className="App">
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Lobster&family=Open+Sans:ital,wght@0,300;0,400;0,700;1,300;1,800&display=swap');
-      </style>
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Reem+Kufi:wght@400;500;600&display=swap');
-      </style>
-      <style>
-        @import
-        url('https://fonts.googleapis.com/css2?family=Lalezar&family=Reem+Kufi:wght@400;500;600&display=swap');
-      </style>
       <Particles
         id="tsparticles"
         init={particlesInit}
@@ -51,28 +58,6 @@ function App() {
             },
           },
           fpsLimit: 120,
-          interactivity: {
-            events: {
-              onClick: {
-                enable: false,
-                mode: "push",
-              },
-              onHover: {
-                enable: true,
-                mode: "repulse",
-              },
-              resize: true,
-            },
-            modes: {
-              push: {
-                quantity: 4,
-              },
-              repulse: {
-                distance: 200,
-                duration: 0.4,
-              },
-            },
-          },
           particles: {
             color: {
               value: "#ffffff",
@@ -91,7 +76,7 @@ function App() {
                 default: "bounce",
               },
               random: false,
-              speed: 3,
+              speed: 1,
               straight: false,
             },
             number: {
@@ -114,20 +99,80 @@ function App() {
           detectRetina: true,
         }}
       />
-      <Navbar />
+      <Cursor
+        activeCursor={activeCursor}
+        activeInputCursor={activeInputCursor}
+        moreInfo={moreInfo}
+      />
 
+      <div
+        className="language"
+        style={{
+          left: localStorage.getItem("i18nextLng") === "ar" && "10px",
+          right: localStorage.getItem("i18nextLng") === "en" && "10px",
+        }}
+        onClick={() => {
+          if (document.body.dir === "rtl") {
+            i18n.changeLanguage("en");
+            document.body.dir = "ltr";
+          } else {
+            i18n.changeLanguage("ar");
+            document.body.dir = "rtl";
+          }
+        }}
+      >
+        {localStorage.getItem("i18nextLng") === "ar" ? "EN" : "AR"}
+      </div>
       <Routes>
-        <Route path="/" element={<Home />}></Route>
-        <Route path="about" element={<About />}></Route>
-        <Route path="projects" element={<Projects />}></Route>
+        <Route
+          path="/"
+          element={<Home setActiveCursor={setActiveCursor} />}
+        ></Route>
+        <Route
+          path="Home"
+          element={<Home setActiveCursor={setActiveCursor} />}
+        ></Route>
+        <Route
+          path="about"
+          element={
+            <>
+              <Navbar setActiveCursor={setActiveCursor} />
+              <About />
+            </>
+          }
+        ></Route>
+        <Route
+          path="projects"
+          element={
+            <>
+              <Navbar setActiveCursor={setActiveCursor} />
+              <Projects setMoreInfo={setMoreInfo} />
+            </>
+          }
+        ></Route>
         <Route
           path="projects/:projectId"
-          element={<ProjectDetails></ProjectDetails>}
+          element={
+            <>
+              <Navbar setActiveCursor={setActiveCursor} />
+              <ProjectDetails></ProjectDetails>
+            </>
+          }
         ></Route>
-        <Route path="contact" element={<ContactUs />}></Route>
+        <Route
+          path="contact"
+          element={
+            <>
+              <Navbar setActiveCursor={setActiveCursor} />
+              <ContactUs
+                setActiveCursor={setActiveCursor}
+                setActiveInputCursor={setActiveInputCursor}
+              />
+            </>
+          }
+        ></Route>
       </Routes>
     </div>
   );
 }
-export { cursor };
 export default App;

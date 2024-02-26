@@ -1,0 +1,71 @@
+/* personal information */
+.about table {
+    height: 54vh;
+    font-size: 17px;
+    padding: 15px;
+    width: 80%;
+    margin: auto;
+    border-spacing: 0;
+}
+
+.about table td:not(td.button) {
+    border-bottom: 1px solid var(--border--color);
+    padding: 20px 0;
+}
+
+.about table tr td span:first-child {
+    color: var(--fontSecond--color);
+    font-weight: 500;
+}
+
+.about table tr td span:last-child {
+    font-weight: bold;
+}
+
+.about td.button {
+    padding-top: 20px;
+}
+
+.about td.button a {
+    height: 100%;
+    height: 100%;
+    display: inline-block;
+}
+
+.about td.button:hover .cursor {
+    transform: scale(2);
+    background-color: var(--main--color);
+}
+
+@media (max-width: 992px) {
+    .about table {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+    .about table tr td span:last-child {
+        display: block;
+    }
+}
+
+/* my skills */
+.my_skills {
+    position: relative;
+    transition: all 15s linear;
+    margin-bottom: 60px;
+}
+
+.my_skills .skills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.my_skills .skills .skill {
+    padding: 7px;
+    background: rgb(100 100 100 / 61%);
+    width: 150px;
+    height: 150px;
+    border: 9px solid black;
+}

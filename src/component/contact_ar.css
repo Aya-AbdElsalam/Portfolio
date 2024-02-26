@@ -1,8 +1,0 @@
-[dir="rtl"] .contact form button i {
-    display: inline-block;
-    transform: rotateY(180deg);
-}
-
-[dir="rtl"] .get_in_touch>div:last-of-type li i {
-    margin-left: 20px;
-}

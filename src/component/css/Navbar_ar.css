@@ -1,0 +1,24 @@
+[dir="rtl"] .navbar ul.links li i {
+    margin-right: 0;
+    margin-left: 16px;
+    border-radius: 0px 10px 10px 0px;
+}
+
+[dir="rtl"] .lan li {
+    font-size: 13px;
+    width: 45%;
+}
+
+[dir="rtl"] .navbar ul.links.open {
+    margin-right: 0;
+}
+
+[dir="rtl"] .navbar .menu.open {
+    margin-right: 250px;
+}
+
+@media (max-width: 1200px) {
+    [dir="rtl"] .navbar ul.links {
+        margin-right: -300px;
+    }
+}

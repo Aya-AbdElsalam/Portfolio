@@ -1,0 +1,20 @@
+[dir="rtl"] .projectDetails .buttons {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+[dir="rtl"] .projectDetails .more_project {
+    margin-right: 40px;
+}
+
+[dir="rtl"] .projectDetails .more_project i {
+    animation: moveRight 1s cubic-bezier(0.18, 0.89, 0.32, 1.28) infinite;
+    transform: rotateY(180deg);
+    float: inline-start;
+    padding-right: 27px;
+
+}
+
+[dir="rtl"] .projectDetails .buttons i {
+    margin-right: 13px;
+}

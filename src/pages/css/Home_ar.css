@@ -7,8 +7,7 @@
 }
 
 [dir="rtl"] .home h1 {
-    font-family: "Noto Nastaliq Urdu",
-        serif;
+    font-family: "Noto Nastaliq Urdu", serif !important;
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;

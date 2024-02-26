@@ -20,8 +20,7 @@
 .home h1 {
   font-size: 150px;
   margin: 0;
-  font-family: "Cookie",
-    cursive;
+  font-family: "Cookie", cursive !important;
   font-weight: 400;
   font-style: normal;
 }
@@ -29,7 +28,6 @@
 .home h2 {
   margin: 0;
   font-size: 65px;
-  font-family: fantasy;
   font-family: "Roboto Condensed",
     sans-serif;
   font-weight: 400;
